@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "BranchName": "Jhankar",
+      "Caste": "Jhankar",
       "Gotra": "Jhumazh",
       "Deity": "Sudasan",
       "Location": "",
@@ -26,7 +26,7 @@
     },
     {
       "id": 2,
-      "BranchName": "Lada",
+      "Caste": "Lada",
       "Gotra": "Sitas",
       "Deity": "Sanchag",
       "Location": "",
@@ -44,7 +44,7 @@
     },
     {
       "id": 3,
-      "BranchName": "Tavari",
+      "Caste": "Tavari",
       "Gotra": "Chavda",
       "Deity": "Kashyap",
       "Location": "",
@@ -64,7 +64,7 @@
     },
     {
       "id": 4,
-      "BranchName": "Bajaj",
+      "Caste": "Bajaj",
       "Gotra": "Bhasali",
       "Deity": "Gaahal",
       "Location": "",
@@ -83,7 +83,7 @@
     },
     {
       "id": 5,
-      "BranchName": "Birla",
+      "Caste": "Birla",
       "Gotra": "Balas",
       "Deity": "Sanchay",
       "Location": "",
@@ -98,7 +98,7 @@
     },
     {
       "id": 6,
-      "BranchName": "Maloo",
+      "Caste": "Maloo",
       "Gotra": "Khlans",
       "Deity": "Sachaya",
       "Location": "",
@@ -113,7 +113,7 @@
     },
     {
       "id": 7,
-      "BranchName": "Maanudhannya",
+      "Caste": "Maanudhannya",
       "Gotra": "Jeslani",
       "Deity": "Maanuchani",
       "Location": "",
@@ -128,7 +128,7 @@
     },
     {
       "id": 8,
-      "BranchName": "Dhoot",
+      "Caste": "Dhoot",
       "Gotra": "Phafedans",
       "Deity": "Likashan",
       "Location": "",
@@ -136,7 +136,7 @@
     },                                                                                          
     {
       "id": 9,
-      "BranchName": "Bhansali",
+      "Caste": "Bhansali",
       "Gotra": "Bhasali",
       "Deity": "Chavda",
       "Location": "",
@@ -144,7 +144,7 @@
     },
     {
       "id": 10,
-      "BranchName": "Aagsud",
+      "Caste": "Aagsud",
       "Gotra": "Kashyap",
       "Deity": "Jakhan",
       "Location": "",
@@ -152,7 +152,7 @@
     },
     {
       "id": 11,
-      "BranchName": "Malpani",
+      "Caste": "Malpani",
       "Gotra": "Bhatyas",
       "Deity": "Saangal",
       "Location": "",
@@ -169,7 +169,7 @@
     },
     {
       "id": 12,
-      "BranchName": "Sikchi",
+      "Caste": "Sikchi",
       "Gotra": "Kashyap",
       "Deity": "Panwar",
       "Location": "",
@@ -180,7 +180,7 @@
     },
     {
       "id": 13,
-      "BranchName": "Naulkha",
+      "Caste": "Naulkha",
       "Gotra": "Kashyap",
       "Deity": "Pathay",
       "Location": "",
@@ -190,7 +190,7 @@
     },
     {
       "id": 14,
-      "BranchName": "Kalantri",
+      "Caste": "Kalantri",
       "Gotra": "Kashyap",
       "Deity": "Chavanda",
       "Location": "",
@@ -200,7 +200,7 @@
     },
     {
       "id": 15,
-      "BranchName": "Mantri",
+      "Caste": "Mantri",
       "Gotra": "Kavlay",
       "Deity": "Sanchay",
       "Location": "",
@@ -210,7 +210,7 @@
     },
     {
       "id": 16,
-      "BranchName": "Devpura",
+      "Caste": "Devpura",
       "Gotra": "Paras",
       "Deity": "Padhay",
       "Location": "",
@@ -220,7 +220,7 @@
     },
     {
       "id": 18,
-      "BranchName": "Bangarad",
+      "Caste": "Bangarad",
       "Gotra": "Chudas",
       "Deity": "Sanchay",
       "Location": "",
@@ -230,7 +230,7 @@
     },
     {
       "id": 19,
-      "BranchName": "Tapdiya",
+      "Caste": "Tapdiya",
       "Gotra": "Pipalan",
       "Deity": "Ashapura",
       "Location": "",
@@ -241,7 +241,7 @@
     },
     {
       "id": 20,
-      "BranchName": "Chaukhada",
+      "Caste": "Chaukhada",
       "Gotra": "Chandras",
       "Deity": "Chivato da",
       "Location": "",
@@ -252,7 +252,7 @@
     },
     {
       "id": 21,
-      "BranchName": "Kabra",
+      "Caste": "Kabra",
       "Gotra": "Achitras",
       "Deity": "Susamad",
       "Location": "",
@@ -268,7 +268,7 @@
     },
     {
       "id": 22,
-      "BranchName": "Karva",
+      "Caste": "Karva",
       "Gotra": "Karvas",
       "Deity": "Sanchay",
       "Location": "",
@@ -282,7 +282,7 @@
     },
     {
       "id": 23,
-      "BranchName": "Chaparwal",
+      "Caste": "Chaparwal",
       "Gotra": "Kaushik",
       "Deity": "Banvar",
       "Location": "",
@@ -293,7 +293,7 @@
     },
     {
         "id": 24,
-        "BranchName": "Kalani",
+        "Caste": "Kalani",
         "Gotra": "Ghaulas",
         "Deity": "Chavanda",
         "Location": "",
@@ -307,7 +307,7 @@
     },
     {
         "id": 25,
-        "BranchName": "Atal",
+        "Caste": "Atal",
         "Gotra": "Gautamasth",
         "Deity": "Sachaya",
         "Location": "",
@@ -318,7 +318,7 @@
     },
     {
         "id": 26,
-        "BranchName": "Asava",
+        "Caste": "Asava",
         "Gotra": "Panchas",
         "Deity": "Ashavari",
         "Location": "",
@@ -331,7 +331,7 @@
     },
     {
         "id": 27,
-        "BranchName": "Kasat",
+        "Caste": "Kasat",
         "Gotra": "Allasas",
         "Deity": "Sanchar",
         "Location": "",
@@ -343,7 +343,7 @@
     },
     {
         "id": 28,
-        "BranchName": "Baldi",
+        "Caste": "Baldi",
         "Gotra": "Laurs",
         "Deity": "Gars",
         "Location": "",
@@ -351,7 +351,7 @@
     },
     {
         "id": 29,
-        "BranchName": "Chechani",
+        "Caste": "Chechani",
         "Gotra": "Seelas",
         "Deity": "Dadyimati",
         "Location": "",
@@ -361,7 +361,7 @@
     },
     {
         "id": 30,
-        "BranchName": "Dwaraka",
+        "Caste": "Dwaraka",
         "Gotra": "Kashyap",
         "Deity": "Mirs",
         "Location": "",
@@ -369,7 +369,7 @@
     },
     {
         "id": 31,
-        "BranchName": "Naynavala",
+        "Caste": "Naynavala",
         "Gotra": "Kashyap",
         "Deity": "Nayan",
         "Location": "",
@@ -379,7 +379,7 @@
     },
     {
         "id": 32,
-        "BranchName": "Porwal",
+        "Caste": "Porwal",
         "Gotra": "Nanņans",
         "Deity": "Matri",
         "Location": "",

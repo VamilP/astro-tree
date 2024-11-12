@@ -4,8 +4,10 @@ import "../styles/card.css";
 
 <div class="card-container" id="card-container"></div>
 
-
 <script>
+    import { colors } from "../utils/constants.ts"
+    console.log(colors)
+
     fetch("/main.json")
     .then((response) => {
         if (!response.ok) {
@@ -26,54 +28,69 @@ import "../styles/card.css";
         }
 
         cardContainer.innerHTML = "";
-        
-        const colors = [
-            '#FFB3BA', '#BAFFC9', '#BAE1FF', '#FFFFBA', '#FFDFBA',
-            '#E0BBE4', '#D2FF72', '#E9EFEC', '#FEC8D8', '#FFDFD3'
-        ];
 
         function createKeyValuePairs(branch) {
-            return `
-                <p style="font-size: 1.1em;" title="Gotra">🧬 : <span style="font-weight: 500;">${branch.Gotra}</span></p>
-                <p style="font-size: 1.1em;" title="Deity">🕉️ : <span style="font-weight: 500;">${branch.Deity}</span></p>
-                <p style="font-size: 1.1em;" title="Caste">🌿 : <span style="font-weight: 500;">${branch.Caste}</span></p>
-            `;
+            return Object.entries(branch)
+                .filter(([key]) => ['Caste', 'Gotra', 'Deity'].includes(key))
+                .map(([key, value]) => {
+                    let icon = '';
+                    switch (key) {
+                        case 'Gotra':
+                            icon = '🧬';
+                            break;
+                        case 'Deity':
+                            icon = '🕉️';
+                            break;
+                        case 'Caste':
+                            icon = '🌿';
+                            break;
+                        default:
+                            icon = '🔑';
+                    }
+                    return `
+                        <p title="${key}">${icon} : <span>${value}</span></p>
+                    `;
+                })
+                .join('');
         }
 
         function createSurnameCards(surnames, gotra, deity, branchName) {
             return surnames.map(surname => `
                 <div class="surname-card">
-                    <p style="font-size:1.3em; font-weight: 600;"> ${surname}</p>
                     <p><strong title="Gotra">🧬 :</strong> ${gotra}</p>
                     <p><strong>🕉️ :</strong> ${deity}</p>
                     <p><strong>🌿 :</strong> ${branchName}</p>
-                    <button class="copy-button" data-gotra="${gotra}" data-surname="${surname}" data-deity="${deity}" data-branch="${branchName}">
+                    <p><strong>hi :</strong> ${surname.hi}</p>
+                    <button class="copy-button" data-gotra="${gotra}" data-surname="${surname.en}" data-deity="${deity}" data-branch="${branchName}">
                         ...
                     </button>
                 </div>
             `).join('');
         }
 
+
         data.forEach((branch, index) => {
             const card = document.createElement("div");
             card.className = "card";
-
             const colorIndex = index % colors.length;
             card.style.backgroundColor = colors[colorIndex];
 
             const keyValueHTML = createKeyValuePairs(branch);
             const surnamesHTML = createSurnameCards(branch.Surnames, branch.Gotra, branch.Deity, branch.Caste);
-
+            
             const cardContent = `
-                <div class="card-header">
-                    ${keyValueHTML}
+            <div class="card-header">
+                ${keyValueHTML}
+            </div>
+            <div class="card-body">
+                <h3>Surnames</h3>
+                <div class="surname-container">
+                    ${surnamesHTML}
                 </div>
-                <div class="card-body">
-                    <h3>Surnames</h3>
-                    <div class="surname-container">
-                        ${surnamesHTML}
-                    </div>
-                </div>
+            </div>
+            <button class="copy-button-all" data-gotra="${branch.Gotra}" data-surname="${branch.Surnames.map(surname => surname.en).join(', ')}" data-deity="${branch.Deity}" data-branch="${branch.Caste}">
+                Copy All
+            </button>
             `;
 
             card.innerHTML = cardContent;
@@ -108,21 +125,11 @@ import "../styles/card.css";
                     const surname = target.getAttribute("data-surname");
                     const deity = target.getAttribute("data-deity");
                     const branch = target.getAttribute("data-branch");
-
-                    const textToCopy = `🧬 Gotra: ${gotra}\nSurname: ${surname}\n🕉️ Deity: ${deity}\n🌿 Caste: ${branch}`;
-
+                    const textToCopy = `Gotra: ${gotra}, Surname: ${surname}, Deity: ${deity}, Branch: ${branch}`;
                     navigator.clipboard.writeText(textToCopy).then(() => {
-                        const tooltip = document.createElement('span');
-                        tooltip.className = 'copied-tooltip';
-                        tooltip.textContent = "Copied!";
-                        target.appendChild(tooltip);
-                        
-                        setTimeout(() => {
-                            target.removeChild(tooltip);
-                        }, 2000);
-
+                        alert("Copied to clipboard: " + textToCopy);
                     }).catch(err => {
-                        console.error("Error copying to clipboard:", err);
+                        console.error("Failed to copy: ", err);
                     });
                 });
             });
@@ -131,7 +138,7 @@ import "../styles/card.css";
         });
     })
     .catch((error) => {
-        console.error("Error fetching data:", error);
+        console.error("Error fetching data: ", error);
     });
 </script>
 
